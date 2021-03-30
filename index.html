@@ -40,8 +40,10 @@
 			main h1 {
 				font-size: 5rem;
 			}
-            main .xxl{
-                font-size:6.5rem;
+            main img{
+                display:block;
+				width: 100%;
+				margin:0 auto;
             }
 			main p.lede {
 				font-size: 3.75rem;
@@ -93,10 +95,21 @@
             main form input[type=submit]:active{
                 filter:brightness(80%);
             }
-            main section#image-footer img{
-                width:8rem;
+			main section#beach-ball{
+				display:flex;
+				justify-content: space-between;
+				max-width: 40rem;
+				margin: 0 auto;
+			}
+            main section#beach-ball img{
+                max-width:8rem;
                 animation: rotation 5s infinite linear;
             }
+			main section#head-badge img{
+				width: 8rem;
+			}
+
+
 
             @keyframes rotation {
                 from {
@@ -129,13 +142,32 @@
                 main form input[type=submit]{
                     width: 100%;
                }
+			   main section#beach-ball img{
+                max-width:6rem;
+            }
 			}
+
+            .mailto-message{
+                position: absolute;
+                left:50%;
+                transform: translate(-50%, -110%);
+                display:none;
+                width: auto;
+                white-space: nowrap;
+                font-size: .875rem;
+                background-color: #00000080;
+                color: #fff;
+                padding: .5rem 1rem ;
+                border-radius: 52px;
+            }
+            .mailto-wrapper:hover .mailto-message {display: inline-block;}
+
 		</style>
 	</head>
 	<body>
 		<main>
 			<section id="beachclub">
-				<h1 id="beach_club">Welcome to the<br/> <span class="xxl">Beach Club</span></h1>
+				<h1 id="beach_club">Welcome to the<br/> <img src="./beach-club-logo.png" alt="beach club"></h1>
 			</section>
 
 			<section id="who_we_are">
@@ -144,12 +176,10 @@
 
 			<section id="contact">
 				<p>
-					If you want to ask a question send us an If you want to ask a question
+					If you want to ask a question, send us an email at:
 					<span class="mailto-wrapper"
-						><a href="mailto:sup@beachclubzzz.com" class="mailto-link"
-							>send us an email</a
-						><span class="mailto-message"></span>
-							Click to copy email address</span
+						><a href="mailto:sup@beachclubzz.com" class="mailto-link"
+							>sup@beachclubzz.com</a
 						></span
 					>.
 				</p>
@@ -159,15 +189,17 @@
 				</p>
 			</section>
 
-            <section id="image-footer">
+            <section id="beach-ball">
                 <img src="./ball.png" alt="" />
-            </section>
+                <img src="./ball.png" alt="" />
+                <img src="./ball.png" alt="" />
+			</section>
 
 			<section id="subscribe">
 				<form
 					action="https://beachclubzzz.us1.list-manage.com/subscribe/post?u=e6bbce95d92a385df120465ba&amp;id=a9f91fb9f8"
 					method="post"
-					id="mc-embedded-subscribe-form"
+					id="mc-embeddeda-subscribe-form"
 					name="mc-embedded-subscribe-form"
 					class="validate"
 					target="_blank"
@@ -205,4 +237,8 @@
 					</div>
 				</form>
 			</section>
+			<section id="head-badge">
+                <img src="./beach-club-head-badge.png" alt="" />
+            </section>
+
 		</main></html>
